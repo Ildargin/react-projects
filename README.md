@@ -17,4 +17,5 @@ You can see the final app or start working in the start folder with the followin
 
 ## Apps List
 
-1. Readme markdown editor, [folder](./readme-markdown-editor) libraries: [marked](https://github.com/markedjs/marked)
+1. Readme markdown editor: [demo](https://condescending-rosalind-22f433.netlify.app/), [folder](./readme-markdown-editor)
+2. Movie app: [demo](https://elastic-colden-f9a65d.netlify.app/), [folder](./movie-app)

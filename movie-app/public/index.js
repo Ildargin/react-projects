@@ -4,6 +4,9 @@ import './normalize.css';
 import './styles.css';
 import Movie from './components/Movie.js';
 
+// needed for app working https://www.themoviedb.org
+const API_KEY ;
+
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -17,13 +20,13 @@ const App = () => {
   };
 
   useEffect(() => {
-    getMovies('https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=8f621992c7ba0c3f97d76a3d91881265&page=1');
+    getMovies(`https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${API_KEY}&page=1`);
   }, []);
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
     if (searchTerm) {
-      getMovies('https://api.themoviedb.org/3/search/movie?&api_key=8f621992c7ba0c3f97d76a3d91881265&query=' + searchTerm);
+      getMovies(`https://api.themoviedb.org/3/search/movie?&api_key=${API_KEY}&query=` + searchTerm);
     }
     setSearchTerm('');
   };
