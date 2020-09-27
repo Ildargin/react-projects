@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: rgb(219, 219, 219);
+  background-color: rgb(36, 36, 85);
+}
+
+header {
+  padding: 1rem;
+  color: rgb(31, 31, 82);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search {
+  background-color: rgb(31, 31, 82);
+  border: 2px solid rgb(58, 14, 161);
+  color: rgb(219, 219, 219);
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-family: inherit;
+}
+.search:focus {
+  outline: none;
+  border-color: rgb(96, 28, 255);
+}
+
+.movie {
+  width: 250px;
+  margin: 1.3rem;
+  padding: 1rem;
+  position: relative;
+  background-color: rgb(70, 69, 150);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.movie img {
+  object-fit: cover;
+  height: 400px;
+  max-width: 100%;
+}
+
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movie-info span {
+  color: lightgray;
+}
+
+.movie-over {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(110%);
+  transition: transform 0.2s ease-in-out;
+  overflow: auto;
+  max-height: 100%;
+}
+
+.movie:hover .movie-over {
+  transform: translateX(0);
+}
+
+.rate {
+  padding: 0.5rem;
+  background-color: rgb(31, 31, 82);
+}
+
+.red {
+  background-color: rgb(167, 56, 56);
+}
+
+.yellow {
+  background-color: rgb(151, 137, 10);
+}
+
+.green {
+  background-color: rgb(5, 170, 74);
+}
